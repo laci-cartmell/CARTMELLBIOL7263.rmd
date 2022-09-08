@@ -11,6 +11,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## R Markdown
 
-```{r cars}
-print("Hello World") # print hello world
+```
+print("Hello World") # prints hello world
+
+#Assignment 1 Summary:
+# created new repository and linked git account
+# used a SSH key as my 'link' to account
+# used knit to create own GitHub website
 ```
