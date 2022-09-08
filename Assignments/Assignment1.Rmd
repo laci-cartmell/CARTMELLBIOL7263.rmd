@@ -1,0 +1,16 @@
+---
+title: "Assignment1.rmd"
+author: "Laci Cartmell"
+date: "2022-09-08"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r cars}
+print("Hello World") # print hello world
+```
