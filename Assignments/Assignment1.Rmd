@@ -2,8 +2,11 @@
 title: "Assignment2.rmd"
 author: "Laci Cartmell"
 date: "2022-09-08"
-output: html_document
-theme: lumen  
+output: 
+    html_document:
+        toc: true
+        toc_float: true
+        theme: cosmo
 ---
 
 ```{r setup, include=FALSE}
@@ -24,24 +27,22 @@ ___
 
 
 # Research Interests  
-**Website** 
+**Website**  
 - [Lab's Website](https://www.booth-lab.org/)  
-**Veiw the swallow bug**
-![Imagetext](SWBG.jpeg)
+- [ResearchGate](https://www.researchgate.net/profile/Laci-Cartmell)  
 
+**My main reseaerch organism, the swallowbug**
+![Swallowbug](SWBG.jpeg)
 
-## Table
-| DATE | ASSIGNMENT | [LINK]
-| :-- | :-- | :--
-|9-8-22 | Assign1 | [ Lab's Website](https://www.booth-lab.org/)  
-|9-15-22 | Assign2  | [Lab's Website](https://www.booth-lab.org/)
-
-
-```{r}
-Lnk <-"https://github.com/mbtoomey/Biol_7263/blob/main/Data/yeast.Rdata?raw=true"
-download.file(Lnk, "yeast.Rdata", mode = "wb")
-load("yeast.Rdata")
-
-head(yeast)
 ```
+```
+
+## Projects in R
+| DATE | ASSIGNMENT | LINK
+| :-- | :-- | :--
+|9-8-22 | Week 2 | [Assignment 1](https://laci-cartmell.github.io/CARTMELLBIOL7263.rmd/)  
+|9-15-22 | Weel 3  | [Assignment 2](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/tree/main/Assignments/)
+
+
+
 
