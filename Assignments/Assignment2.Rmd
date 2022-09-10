@@ -1,0 +1,48 @@
+---
+title: "Assignment2.rmd"
+author: "Laci Cartmell"
+date: "2022-09-08"
+output: 
+    html_document:
+        toc: true
+        toc_float: true
+        theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Assignment 2 - update profile
+
+___  
+
+___  
+
+
+# Educational Experience  
+**University of Tulsa**  
+- BS in Biology  
+- PhD in Biology
+
+
+# Research Interests  
+**Website**  
+- [Lab's Website](https://www.booth-lab.org/)  
+- [ResearchGate](https://www.researchgate.net/profile/Laci-Cartmell)  
+
+**My main reseaerch organism, the swallowbug**
+![Swallowbug](SWBG.jpeg)
+
+```
+```
+
+## Projects in R
+| DATE | ASSIGNMENT | LINK
+| :-- | :-- | :--
+|9-8-22 | Week 2 | [Assignment 1](https://laci-cartmell.github.io/CARTMELLBIOL7263.rmd/)  
+|9-15-22 | Weel 3  | [Assignment 2](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/tree/main/Assignments/)
+
+
+
+
