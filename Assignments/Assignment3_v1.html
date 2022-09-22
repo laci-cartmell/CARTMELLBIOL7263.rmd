@@ -409,22 +409,69 @@ after species and the number.</code></pre>
 <h3>4</h3>
 <pre class="q1"><code>Find what: (\w.*), (\w{1})\w+ (\w.*)
 Replace with: - \1, \2_\3
-Explanation: I captured the common name (\w.*), the first letter of the genus (\w{1}), and the species name and number with (\w.*). I then used replace to add in &quot;, and _&quot;.</code></pre>
+Explanation: I captured the common name (\w.*), the first letter of the genus (\w{1}), and the species name and 
+number with (\w.*). I then used replace to add in &quot;, and _&quot;.</code></pre>
 </div>
 <div id="section-4" class="section level3">
 <h3>5</h3>
 <pre class="q1"><code>Find what: (\w.*), (\w{1})\w+ (\w{3})\w+(\, \.*\d+)
 Replace with; - \1, \2_\3.\4`
+Explanation: The search code is mainly similar to the one before it. After abbreviating the first letter, I did the same thing to the species name except kept 3 letters. Then I excluded the rest of the word and captured the , \d.</code></pre>
+</div>
+</div>
+<div id="ncbi-questions" class="section level2">
+<h2>NCBI Questions</h2>
+<div id="section-5" class="section level3">
+<h3>6</h3>
+<pre class="q1"><code>All fasta headers in one file
+- grep &#39;^&gt;&#39; rna.fna &gt; startline
+
+Explanation: grep is used to call all lines that contain &#39;&gt;&#39; from the rna.fna file into 
+a new file called startline.
+
+Documentation: 
+
+Owner@DESKTOP-9UO8JLI MINGW64 ~/Documents/CARTMELLBIOL7263 (main)
+$ grep &#39;^&gt;&#39; rna.fna &gt; startline
+
+Owner@DESKTOP-9UO8JLI MINGW64 ~/Documents/CARTMELLBIOL7263 (main)
+$ head startline
+&gt;NM_001316700.2 Cimex lectularius apyrase (LOC106669828), mRNA
+&gt;NM_001316702.1 Cimex lectularius NADPH--cytochrome P450 reductase (LOC106668336), mRNA
+&gt;NM_001316703.1 Cimex lectularius sodium channel protein para (LOC106667833), mRNA
+&gt;NM_001316704.1 Cimex lectularius 72 kDa inositol polyphosphate 5-phosphatase-like (LOC106662976), mRNA
+&gt;NM_001316705.1 Cimex lectularius acetylcholinesterase-like (LOC106669386), mRNA
+&gt;NM_001316706.1 Cimex lectularius acetylcholinesterase-like (LOC106664272), mRNA
+&gt;NM_001316707.1 Cimex lectularius acetylcholinesterase-like (LOC106669436), mRNA
+&gt;NM_001316708.1 Cimex lectularius odorant receptor coreceptor (LOC106665376), mRNA
+&gt;NM_001316709.1 Cimex lectularius probable cytochrome P450 6d5 (LOC106673892), mRNA
+&gt;XM_014383668.2 PREDICTED: Cimex lectularius uncharacterized LOC106674453 (LOC106674453), mRNA
 </code></pre>
 </div>
-<div id="section-5" class="section level3">
-<h3>1</h3>
-<pre class="q1"><code>Find what: (\w)w+ (w+}
-Replace with; - \1_\2```
+<div id="section-6" class="section level3">
+<h3>7</h3>
+<pre class="q1"><code>Full sequences of only the ribosomal transcripts or proteins.
+- cat rna.fna | grep -v &#39;^&gt;&#39; &gt; seqonly
 
-```### 1</code></pre>
-<pre class="q1"><code>Find what: (\w)w+ (w+}
-Replace with; - \1_\2```
+Explanation: the rna file gets piped into the grep funtion which removes all header lines. 
+
+Documentation:
+
+Owner@DESKTOP-9UO8JLI MINGW64 ~/Documents/CARTMELLBIOL7263 (main)
+$ cat rna.fna | grep -v &#39;^&gt;&#39; &gt; seqonly
+
+Owner@DESKTOP-9UO8JLI MINGW64 ~/Documents/CARTMELLBIOL7263 (main)
+$ head seqonly
+TGCAGACTTAGGAGGGAGATGTTGACAACTGTGAGACAAGCGATGAGGTCATCTTACAGGGTAGGGAACCCAATTAGATT
+CCAGCCGACGAATGTAGTTGGTCTTTTACTTTTATCCCTGGTCCTTTCATTTATGCTCGTCCAATCGTATGAGTTAGGCC
+ATGCCAGTGGTGAAACGAATGCAAATTCAAAGTACCCTTTGACAACTCCTGTAGAAGAAAACTTAAAAGTCCGTTTTAAA
+ATTGGTGTCATCTCTGACGATGATAAAAATGCAGTGAGCAAAGATGAGTCAAACACATGGGTAAGCACCTACTTGACAGG
+GACCCTTGAGTGGGAAAAGAGTGCAGATAAAATTACTGTCCAATGGGACAAGGCAAACGAAAAAAAAGTAAAAAGCAAGT
+ATAGCTATGGAGGGCGAGGGATGGAGCTATCGGAGCTTGTTACCTTCAACGGTAATTTACTTACCTTCGATGACAGAACA
+GGACTGGTTTACATATTGAAAGATGACAAAGTCTACCCTTGGGTTGTGCTGGCTGACGGAGATGGTAAAAATAGTAAAGG
+ATTCAAATCAGAATGGGCGACAGAAAAAGCCGGCAATTTATATGTTGGAAGTTCGGGTAAAGAATGGACGACAAAAGAAG
+GTACAATTGAAAATTATAATCCAATGTGGGTTAAGATGATAAATAAGAATGGTGAAGTTACGTCCTTAAACTGGCAAACC
+AATTATGAGAAAATTCGGTCATCCATGAATATTACCTTCCCAGGGTATATGTGGCATGAGGCTGCATGCTGGAGTGACAA
 </code></pre>
 </div>
 </div>
