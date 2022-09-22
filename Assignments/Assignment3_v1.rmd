@@ -40,14 +40,14 @@ after species and the number.
 ```
 ### 4
 ```{Q1}
-Find what: (\w)w+ (w+}
-Replace with; - \1_\2```
-
+Find what: (\w.*), (\w{1})\w+ (\w.*)
+Replace with: - \1, \2_\3
+Explanation: I captured the common name (\w.*), the first letter of the genus (\w{1}), and the species name and number with (\w.*). I then used replace to add in ", and _".
 ```
-### 1
+### 5
 ```{Q1}
-Find what: (\w)w+ (w+}
-Replace with; - \1_\2```
+Find what: (\w.*), (\w{1})\w+ (\w{3})\w+(\, \.*\d+)
+Replace with; - \1, \2_\3.\4`
 
 ```
 ### 1

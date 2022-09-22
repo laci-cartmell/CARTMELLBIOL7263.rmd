@@ -407,14 +407,14 @@ after species and the number.</code></pre>
 </div>
 <div id="section-3" class="section level3">
 <h3>4</h3>
-<pre class="q1"><code>Find what: (\w)w+ (w+}
-Replace with; - \1_\2```
-</code></pre>
+<pre class="q1"><code>Find what: (\w.*), (\w{1})\w+ (\w.*)
+Replace with: - \1, \2_\3
+Explanation: I captured the common name (\w.*), the first letter of the genus (\w{1}), and the species name and number with (\w.*). I then used replace to add in &quot;, and _&quot;.</code></pre>
 </div>
 <div id="section-4" class="section level3">
-<h3>1</h3>
-<pre class="q1"><code>Find what: (\w)w+ (w+}
-Replace with; - \1_\2```
+<h3>5</h3>
+<pre class="q1"><code>Find what: (\w.*), (\w{1})\w+ (\w{3})\w+(\, \.*\d+)
+Replace with; - \1, \2_\3.\4`
 </code></pre>
 </div>
 <div id="section-5" class="section level3">
