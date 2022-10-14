@@ -13,8 +13,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-___  
-
+___
 
 # Educational Experience  
 **University of Tulsa**  
