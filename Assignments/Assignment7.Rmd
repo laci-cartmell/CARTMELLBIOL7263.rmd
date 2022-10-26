@@ -1,0 +1,22 @@
+---
+title: "Assingment 7"
+author: "Laci Cartmell"
+date: "10/24/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## GIS in R
+
+#create plots - include code
+
+**Climate Niche with my locations**
+![ClimateNiche](mysiteshape.png)
+
+**Annual prec. and mean annual temp**
+![Scatterplot](scatterplot.png)
+
+

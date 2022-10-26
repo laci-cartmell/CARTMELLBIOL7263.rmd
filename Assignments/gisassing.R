@@ -165,13 +165,14 @@ my_best_env <- as.data.frame(extract(my_clim_stack, my_best_sites))
 
 
 # plot world's climate
-smoothScatter(x=bgEnv$temperature_seasonality, y=bgEnv$precip_driest_quarter, col='lightblue')
-points(my_best_env$temperature_seasonality, my_best_env$precip_driest_quarter, col='red', pch=16, cex=0.2)
-points(my_sites$temperature_seasonality, my_sites$precip_driest_quarter, pch=16)
+smoothScatter(x=bgEnv$mean_annual_temp, y=bgEnv$Annual_Precipitation, col='lightblue')
+
+points(my_best_env$mean_annual_temp, my_best_env$Annual_Precipitation, col='red', pch=16, cex=0.2)
+points(my_sites$mean_annual_temp, my_sites$Annual_Precipitation, pch=16)
 legend(
-  'bottomright',
+  'topleft',
   inset=0.01,
-  legend=c('world', 'my niche', 'my locations'),
+  legend=c('my_world_thresh', 'my niche', 'my locations'),
   pch=16,
   col=c('lightblue', 'red', 'black'),
   pt.cex=c(1, 0.4, 1)

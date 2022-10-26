@@ -39,6 +39,7 @@ ___
 |9-8-22 | Week 2 | [Assignment 1](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Assignment1.Rmd)  
 |9-15-22 | Week 3  | [Assignment 2](https://laci-cartmell.github.io/CARTMELLBIOL7263.rmd/)
 |9-18-22 | Week 4  | [Assignment 3](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Assignment3_v1.html)
+|10-24-22 | Week 8  | [Assignment 7](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Assignment7.html)
 
 
 
