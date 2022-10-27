@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## GIS in R
 
-#create plots - include code
+
 
 **Climate Niche with my locations**
 ![ClimateNiche](mysiteshape.png)
@@ -19,4 +19,4 @@ knitr::opts_chunk$set(echo = TRUE)
 **Annual prec. and mean annual temp**
 ![Scatterplot](scatterplot.png)
 
-
+[Script for the assignment](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/gisassing.R)
