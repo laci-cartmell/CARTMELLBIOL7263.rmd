@@ -43,8 +43,8 @@ ___
 |9-8-22 | Week 2 | [Assignment 1](https://laci-cartmell.github.io/CARTMELLBIOL7263.rmd/)  
 |9-15-22 | Weel 3  | [Assignment 2](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/tree/main/Assignments/)
 |9-22-22 | Week 4 | [Assignment 3](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/tree/main/Assignments/)
+|9-22-22 | Oct.24th | [Tanner Mierow Assignment](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Graduate%20Lessons/TannerMierow.R)
 
-|9-22-22 | Oct.24th | Tanner Mierow Assignment](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/tree/main/Assignments/GraduteLessons/TannerMierow)
 
 
 
