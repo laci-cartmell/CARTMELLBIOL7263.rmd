@@ -1,0 +1,57 @@
+---
+title: "Mierow seminar assignment"
+author: "Laci Cartmell"
+date: "2022-10-30"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Tanner Mierow Assignment
+
+### Visual acuity of an organism can be found by : 
+
+AcuityView(photo = img, distance = 2, realWidth = 4, eyeResolutionX = 8.14, eyeResolutionY = NULL, plot = T, output = "firstimage.jpg" )"
+   
+ - where distance is distance from image, realwidth is width object of interest,
+ - eRX is organisms on x axis, most dont have a y
+
+
+### Organism - CPD - MRA
+      MRA = 1/CPD
+
+ - Rock Dove - 18 - 0.0566
+ - House Sparrow - 4.8 - 0.208
+ - Black Vulture - 15.8 - 0.06
+ - Jumping Spider - 12 - 0.083
+ - Wolf Spider - 0.2 - 5
+
+I chose a house sparrow image and checked the acuity of the rock dove, house sparrow, and black vulture against it. I used a pop can image some spiders will use them for habitats, esp, in urban areas! And then the dif. btw my two favorite spiders!
+
+
+**Results at the different distances*
+![Jumping Spider 6](Graduate Lessons/Jumpingspider6.jpg)
+
+![Jumping Spider 12](Graduate Lessons/Jumpingspider12.jpg)*
+![Jumping Spider 18](Graduate Lessons/Jumpingspider18.jpg)*
+![Jumping Spider 6](Graduate Lessons/wolfspider6.jpg)*
+![Jumping Spider 12](Graduate Lessons/wolfspider12.jpg)*
+![Jumping Spider 18](Graduate Lessons/woldspider18.jpg)*
+
+![Wolf Spider 6](Graduate Lessons/wolfspider6.jpg)*
+![Wolf Spider 12](Graduate Lessons/wolfspider12.jpg)*
+![wolf Spider 18](Graduate Lessons/woldspider18.jpg)*
+
+![vulture 6](Graduate Lessons/vulture6.jpg)*
+![vulture 18](Graduate Lessons/vulture18.jpg)*
+![vulture 30](Graduate Lessons/vulture30.jpg)*
+
+![vulture 6](Graduate Lessons/vulture6.jpg)*
+![vulture 18](Graduate Lessons/vulture18.jpg)*
+![vulture 30](Graduate Lessons/vulture30.jpg)*
+
+![vulture 6](Graduate Lessons/vulture6.jpg)*
+![vulture 18](Graduate Lessons/vulture18.jpg)*
+![vulture 30](Graduate Lessons/vulture30.jpg)*
