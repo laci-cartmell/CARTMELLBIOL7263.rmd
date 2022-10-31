@@ -1,0 +1,54 @@
+---
+title: "PCAwR"
+author: "Laci Cartmell"
+date: "10/31/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Presentation Rubric
+Each student will develop a lesson and teach the class about an R package, specialized analysis, or data visualization approach that they have or will apply to their own research.
+
+### Your lesson should include: 
+
+1. An introductory lecture/walk through of the tool, analyses, or visualization.
+- Aim for ~40 minute presentation to allow time for other lessons and for folks to work through exercises at the end of the session.
+- Detailed lecture notes.
+written in Rmarkdown
+posted to you Github webpage in html format.
+2. An exercise where folks can practice implementing the to tool, analyses, or visualization.
+written in Rmarkdown
+posted to you Github webpage in html format.
+Where appropriate provide a sample data set (ideally real data).
+- Provide assistance to students to help them complete the exercise
+- Please select your topic and confirm it with me at least one month before your scheduled presentation.
+
+##  Grading
+  Item	Points
+  Lecture presentation	40
+  Lecture notes	40
+  Exercise	20
+  Total	100
+
+##PCA 
+
+Principal Components Analysis (PCA) visualizes large datasets with complex interactions
+
+It finds the lowest variation and 
+
+ embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
