@@ -46,7 +46,8 @@ ___
 ## Lesson 
 | DATE | ASSIGNMENT | LINK
 | :-- | :-- | :--
-|11-02-22 |PCA | [Cartmell_PCA]()
+|11-02-22 |PCA Lesson | [Cartmell_PCALesson](https://laci-cartmell.github.io/Cartmell_Lesson_PCA/)
+|11-02-22 |PCA Practice | [PCAPractice_NLCD_CliffSwallow](https://github.com/laci-cartmell/Cartmell_Lesson_PCA/blob/main/Cartmell_NLCD_Rlesson.xlsx)
 
 
 
