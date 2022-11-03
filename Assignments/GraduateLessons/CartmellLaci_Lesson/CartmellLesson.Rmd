@@ -4,25 +4,32 @@ author: "Laci Cartmell"
 date: "10/31/2022"
 output: html_document
 ---
+
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-## What is PCA?
 
-Principal Components Analysis (PCA) is the analysis of the principal components that explain a large portion of the variation in a dataset.
+## Understanding PCA
 
-Principal components are linear combinations of the original predictors. Because of the orthogonal transformations the data undergoes, numerical data works the best. You could code categorical as continuous but better to use categorical variables later on for grouping (plus pretty colors)
+Interactions between variables are often hidden especially w/complex and/or large datasets. 
 
+How do 10 variables interact with each other variable? We could make 45 pairwise scatterplots, but looking at them would be time consuming - or we could use PCA to find explore those interactions for us. 
+
+PCAs are often used to visualize large datasets because they reduce complexity while retaining important information. 
+
+So, what exactly is PCA?
+
+Principal Components Analysis (PCA) is a statistical test that reduces dimensionality while preserving variance by linearly transforming data into new coordinate system with fewer dimensions than the initial data.
+
+PCA takes in data as a dataframe. Then, it is centered and scaled which is the basis of the new coordinate plane.     
+ 
 The transformation fits data into a coordinate system with the most variance is in the first coordinate (component), the 2nd most variance in the second coordinate, and so on. 
 
+Each principal component is now a summary of the variables from original data. Principal components are linear combinations of the original predictors. 
 
-## When to use a PCA?
-
-Interactions between variables are often hidden especially w/complex data.
-
-How do 10 variables interact with each other variable? We could make 45 pairwise scatterplots, but looking at them would be time consuming - or we could use PCA to find those interactions for us. 
+Because of the orthogonal transformation the data undergoes, numerical data works the best. You could code categorical as continuous but better to use categorical variables later on for grouping (plus pretty colors)
 
 
 PCA does multiple things at once: 
@@ -37,12 +44,16 @@ PCA does multiple things at once:
   -  PCR - Principle Component Regression
         - "baby machine learning"
 
-The goal is to explain the most variability with fewer variables than we started with. If we can capture most of the variation in two dimensions, then we can project all the observations onto a scatterplot - 
+The goal of the PCA is to explain the most variability with fewer variables than we started with. If we can capture most of the variation in two dimensions, then we can project all the observations onto a scatterplot known as a biplot. However, if a majority of the variation isn't explained by the first two components, adding the 3rd pc may be necessary. But how does that change our PCA and the visualization of it?
+
+
+
+
 
 
 ## PCA in R
 
-```{r setup, include=FALSE}
+```
 
 #install.packages("ggfortify", "devtools", "remotes") 
 
@@ -96,17 +107,14 @@ biplot_iris_pca
 
 The screeplot is also used to decide if our data fits a PCA. Sometimes, a PCA won't explain enough variance from only 2 components to be incredibly helpful. 
 
-It can also indicate when to use a 3-D PCA
 
-
-
-
-```{r}
+```
 
 
 library(rgl)
+
 #interactive plot
-plot3d(Iris_pca$scores[,1:3], col=iris$Species) #
+plot3d(Iris_pca$scores[,1:3], col=iris$Species)
 
 # not great tools for 3d in R, but we can look at the 3 pcs with most variance
 
@@ -141,7 +149,7 @@ for (k in 1:nrow(loads)) {
             opacity = 1) 
 }
 print(p)
-#read in file
+```
 
 
 
