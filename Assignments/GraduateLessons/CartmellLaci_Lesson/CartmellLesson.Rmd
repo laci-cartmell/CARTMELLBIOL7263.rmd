@@ -42,14 +42,8 @@ PCA does multiple things at once:
   -  variable reduction
   -  reduce dimensionality - esp if vars are correlated
   -  PCR - Principle Component Regression
-        - "baby machine learning"
 
 The goal of the PCA is to explain the most variability with fewer variables than we started with. If we can capture most of the variation in two dimensions, then we can project all the observations onto a scatterplot known as a biplot. However, if a majority of the variation isn't explained by the first two components, adding the 3rd pc may be necessary. But how does that change our PCA and the visualization of it?
-
-
-
-
-
 
 ## PCA in R
 
