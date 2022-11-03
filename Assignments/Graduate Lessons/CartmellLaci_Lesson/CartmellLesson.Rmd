@@ -4,6 +4,9 @@ author: "Laci Cartmell"
 date: "10/31/2022"
 output: html_document
 ---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 
 ## What is PCA?
@@ -40,9 +43,8 @@ The goal is to explain the most variability with fewer variables than we started
 ## PCA in R
 
 ```{r setup, include=FALSE}
-#knitr::opts_chunk$set(echo = TRUE)
 
-#install.packages("ggfortify", "devtools", "remotes")
+#install.packages("ggfortify", "devtools", "remotes") 
 
 # Iris dataset - 3 species, 50 samples each
 str(iris)
