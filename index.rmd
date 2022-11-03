@@ -39,14 +39,14 @@ ___
 |9-8-22 | Week 2 |[Assignment1](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Assignment1.Rmd)  
 |9-15-22 | Week 3  |[Assignment2](https://laci-cartmell.github.io/CARTMELLBIOL7263.rmd/)
 |9-18-22 | Week 4  |[Assignment3](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Assignment3_v1.html)
-|10-24-22 | Week 8  |[Assignment7](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Assignment7.html)
+|10-24-22 | Week 8  | [Assignment7](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Assignment7.html)
 
 
 
 ## Lesson 
 | DATE | ASSIGNMENT | LINK
 | :-- | :-- | :--
-|11-02-22 | PCA |[Cartmell_PCA](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/GraduateLessons/CartmellLaci_Lesson/index.html)
+|11-02-22 |PCA | [Cartmell_PCA](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/GraduateLessons/CartmellLaci_Lesson/index.rmd)
 
 
 
