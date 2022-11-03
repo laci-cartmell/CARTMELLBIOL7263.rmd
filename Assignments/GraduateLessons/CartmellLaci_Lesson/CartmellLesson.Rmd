@@ -1,14 +1,13 @@
 ---
-title: "PCA with R"
-author: "Laci Cartmell"
-date: "10/31/2022"
+title: PCA with R
+author: Laci Cartmell
+date: 10/31/2022
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-
 
 
 ## Understanding PCA
