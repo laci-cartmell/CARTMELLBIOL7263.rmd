@@ -46,7 +46,7 @@ ___
 ## Lesson 
 | DATE | ASSIGNMENT | LINK
 | :-- | :-- | :--
-|11-02-22 | PCA | [Cartmell_PCA](https://laci-cartmell.github.io/CARTMELLBIOL7263.rmd/blob/main/Assignments/Graduate%20Lessons/CartmellLaci_Lesson/CartmellLesson.html)
+|11-02-22 | PCA | [Cartmell_PCA](https://laci-cartmell.github.io/Cartmell_Lesson_PCA/)
 
 
 
