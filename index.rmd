@@ -47,7 +47,7 @@ ___
 | DATE | ASSIGNMENT | LINK
 | :-- | :-- | :--
 |11-02-22 | PCA Lesson Notes | [Cartmell_PCA](https://laci-cartmell.github.io/Cartmell_Lesson_PCA/)
-|11-02-22 | PCA Lesson HW  | [Cartmell_PCA](https://github.com/laci-cartmell/Cartmell_Lesson_PCA/blob/main/mydata.R)
+|11-02-22 | R Script with PCA HW | [Cartmell_HW](https://github.com/laci-cartmell/Cartmell_Lesson_PCA/blob/main/Cartmell_pcapractice.R)
 |11-02-22 | Data to download | [NLCDCOLONY_PCA](https://github.com/laci-cartmell/Cartmell_Lesson_PCA/blob/main/Cartmell_NLCD_Rlesson.xlsx)
 
 
