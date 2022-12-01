@@ -20,17 +20,25 @@ MBT_COUNT2 <- MBT_ebird %>%
   summarise(year)
 
 View(MBT_COUNT2)
+
+
 MBT_COUNT <- MBT_ebird %>%
   group_by(year) %>%
   mutate(year_count = n())
-
-val <- max(MBT_COUNT$year_count)
-grep(1672, MBT_COUNT)
 View(MBT_COUNT)
 
+val <- max(MBT_COUNT$year_count)
+print(paste("The max count is", val))
+
+years <- filter(MBT_COUNT, year_count == 1672)
+yearmaxval <- max(years$year)
+print(paste(yearmaxval, "had the max count of birds"))
   
 ## Problem 2
 #in that year, how many different species did I obser\
-MBT_ebird %>%
+years %>%
   group_by(scientific_name) %>%
   mutate(year_count = n())
+
+
+d
