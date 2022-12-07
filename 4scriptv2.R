@@ -78,15 +78,19 @@ print(paste(statetoprwb$location, "is where most RWBs were found in "))
 
 
 ## Problem 4
-## Filter 5-200min duration. Find mean rate per checklist that I encounter species each year
-# calculate number of species in each checklist / duration - take mean for year
+## Filter 5-200min duration. 
+## Find mean rate per checklist that I encounter species each year
+## calculate number of species in each checklist / duration - take mean for year
+
+#reminder of file format
+View(MBT_ebird)
+
+#filter by duration
+filtered <- filter(MBT_ebird, duration >= 5 & duration <= 200)
+View(filtered)
 
 
-#use search to find pattern of red-winged blackbirds
-#create new tibble with only those matches
-#group by state, create count var
-#print resutlsyear has the most individual birds, how many?
-
+alculate the mean rate per checklist that I encounter species each year. Specifically, calculate the number of species in each checklist divided by duration and then take the mean for the year.
 
 
 ## Problem 5
