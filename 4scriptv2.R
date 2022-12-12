@@ -13,7 +13,7 @@ View(MBT_ebird)   #View the file
 #count_tot -> total number of birds seen that day
 #count -> count of times a species was observed
 
-
+############
 ## Problem 1
 ## Which year has the most individual birds, how many?
 
@@ -53,7 +53,7 @@ print(paste(species_count, "species were observed."))
 
 ############
 ## Problem 3
-## Which state, most freq. observe red-winged blackbirds
+## Which  ,li
 #use filter to find pattern of red-winged blackbirds
 #create new tibble with only those matches
 #group by state, create count var
@@ -89,35 +89,42 @@ View(MBT_ebird)
 filtered <- filter(MBT_ebird, duration >= 5 & duration <= 200)
 View(filtered)
 
+# Rate of species per list_ID 
+rpc <- filtered %>%
+  group_by(list_ID) %>%
+  mutate(count = n()) %>%    #count of list_id observations
+  mutate(rate = count / duration)
+View(rpc)
 
-alculate the mean rate per checklist that I encounter species each year. Specifically, calculate the number of species in each checklist divided by duration and then take the mean for the year.
+# Take a mean for the year
+mean_rate_list <- rpc %>%
+  group_by(year) %>%
+  summarize(mean_rate_f=mean(rate))
+  #mutate(mean_rate = rate / year))
+View(mean_rate_list)
 
 
+############
 ## Problem 5
-## tibble w/10 top freq.obsv.species. 
+## tibble w/10 top freq.obs.species. 
 # make a top ten list _ sort by observations, then remove unique species ,  head of ten
 # filter observations with that list
 # export tibble to csv in folder 'Results' w/in R project
 # add link to markdown doc.
 
-
-
-
-
-
-
-
-
-
-
-#select all species names and put in list
-species_count <- maxyear %>%
+#create a ranking of species observations
+species_rank_top10 <- MBT_ebird %>%
   group_by(scientific_name) %>%
-  mutate(scientific_name_count = n())
+  summarize(freq = sum(count)) %>%
+  arrange(by = desc(freq)) %>%
+  head(n=10)
+View(species_rank_top10)
 
-View(species_count)
-#find max value
-maxcountspecies <- max(species_count$scientific_name_count)
+#top ten list
+top10 <- select(species_rank_top10, 1)
 
-print(maxcountspecies)
->>>>>>> 29582be94020f2340208a29ae3dd90329e4a4741
+MBT_TOP10 <- MBT_ebird %>%  filter(scientific_name == species_rank_top10$scientific_name)
+
+View(MBT_TOP10)
+#write csv
+write_csv(MBT_TOP10, "~/CARTMELLBIOL7263.rmd/Assignments/Results/MBT_top10.csv")
