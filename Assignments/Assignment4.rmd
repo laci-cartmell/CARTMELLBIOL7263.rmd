@@ -32,7 +32,7 @@ View(MBT_ebird)   #View the file
 ```
 
 ## Problem 1
-Which year has the most individual birds, how many?
+- Which year has the most individual birds, how many?
 
 ```
 # group by year, the summarize count for each year?
@@ -61,7 +61,7 @@ View(years)
 ```
 
 ## Problem 2 
-Count for that year
+- Count for that year
 ```
 #count all unique instance of name
 species_count <- n_distinct(years$scientific_name)
@@ -71,9 +71,9 @@ print(paste(species_count, "species were observed."))
 
 
 ## Problem 3
-use filter to find pattern of red-winged blackbirds
-create new tibble with only those matches
-group by state, create count var
+- use filter to find pattern of red-winged blackbirds
+- create new tibble with only those matches
+- group by state, create count var
 
 ```
 #filter by pattern of name
@@ -98,9 +98,9 @@ print(paste(statetoprwb$location, "is where most RWBs were found in "))
 ```
 
 ## Problem 4
-Filter 5-200min duration. 
-Find mean rate per checklist that I encounter species each year
-Calculate number of species in each checklist / duration - take mean for year
+- Filter 5-200min duration. 
+- Find mean rate per checklist that I encounter species each year
+- Calculate number of species in each checklist / duration - take mean for year
 ```
 #reminder of file format
 View(MBT_ebird)
@@ -125,11 +125,12 @@ View(mean_rate_list)
 ```
 
 ## Problem 5
-tibble w/10 top freq.obs.species. 
-make a top ten list _ sort by observations, then remove unique species ,  head of ten
-filter observations with that list
-export tibble to csv in folder 'Results' w/in R project
-add link to markdown doc.
+- tibble w/10 top freq.obs.species. 
+- make a top ten list _ sort by observations, then remove unique species ,  head of ten
+- filter observations with that list
+- export tibble to csv in folder 'Results' w/in R project
+- add link to markdown doc.
+
 ```
 #create a ranking of species observations
 species_rank_top10 <- MBT_ebird %>%
@@ -148,4 +149,4 @@ View(MBT_TOP10)
 #write csv
 write_csv(MBT_TOP10, "~/CARTMELLBIOL7263.rmd/Assignments/Results/MBT_top10.csv")
 ```
-[Link to CVS File](https://laci-cartmell/CARTMELLBIOL7263.rmd/tree/main/Assignments/Results/MBT_top10.csv/)
+[Link to CVS File](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Results/MBT_top10.csv)

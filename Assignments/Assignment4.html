@@ -390,7 +390,9 @@ View(MBT_ebird)   #View the file
 </div>
 <div id="problem-1" class="section level2">
 <h2>Problem 1</h2>
-<p>Which year has the most individual birds, how many?</p>
+<ul>
+<li>Which year has the most individual birds, how many?</li>
+</ul>
 <pre><code># group by year, the summarize count for each year?
 
 MBT_COUNT &lt;- MBT_ebird %&gt;%
@@ -417,7 +419,9 @@ View(years)</code></pre>
 </div>
 <div id="problem-2" class="section level2">
 <h2>Problem 2</h2>
-<p>Count for that year</p>
+<ul>
+<li>Count for that year</li>
+</ul>
 <pre><code>#count all unique instance of name
 species_count &lt;- n_distinct(years$scientific_name)
 species_count
@@ -425,8 +429,11 @@ print(paste(species_count, &quot;species were observed.&quot;))</code></pre>
 </div>
 <div id="problem-3" class="section level2">
 <h2>Problem 3</h2>
-<p>use filter to find pattern of red-winged blackbirds create new tibble
-with only those matches group by state, create count var</p>
+<ul>
+<li>use filter to find pattern of red-winged blackbirds</li>
+<li>create new tibble with only those matches</li>
+<li>group by state, create count var</li>
+</ul>
 <pre><code>#filter by pattern of name
 RWB_COUNT &lt;- MBT_ebird %&gt;%
   filter(common_name == &quot;Red-winged Blackbird&quot;) %&gt;%
@@ -449,9 +456,12 @@ print(paste(statetoprwb$location, &quot;is where most RWBs were found in &quot;)
 </div>
 <div id="problem-4" class="section level2">
 <h2>Problem 4</h2>
-<p>Filter 5-200min duration. Find mean rate per checklist that I
-encounter species each year Calculate number of species in each
-checklist / duration - take mean for year</p>
+<ul>
+<li>Filter 5-200min duration.</li>
+<li>Find mean rate per checklist that I encounter species each year</li>
+<li>Calculate number of species in each checklist / duration - take mean
+for year</li>
+</ul>
 <pre><code>#reminder of file format
 View(MBT_ebird)
 
@@ -475,10 +485,14 @@ View(mean_rate_list)</code></pre>
 </div>
 <div id="problem-5" class="section level2">
 <h2>Problem 5</h2>
-<p>tibble w/10 top freq.obs.species. make a top ten list _ sort by
-observations, then remove unique species , head of ten filter
-observations with that list export tibble to csv in folder ‘Results’
-w/in R project add link to markdown doc.</p>
+<ul>
+<li>tibble w/10 top freq.obs.species.</li>
+<li>make a top ten list _ sort by observations, then remove unique
+species , head of ten</li>
+<li>filter observations with that list</li>
+<li>export tibble to csv in folder ‘Results’ w/in R project</li>
+<li>add link to markdown doc.</li>
+</ul>
 <pre><code>#create a ranking of species observations
 species_rank_top10 &lt;- MBT_ebird %&gt;%
   group_by(scientific_name) %&gt;%
@@ -495,7 +509,7 @@ MBT_TOP10 &lt;- MBT_ebird %&gt;%  filter(scientific_name == species_rank_top10$s
 View(MBT_TOP10)
 #write csv
 write_csv(MBT_TOP10, &quot;~/CARTMELLBIOL7263.rmd/Assignments/Results/MBT_top10.csv&quot;)</code></pre>
-<p><a href="https://laci-cartmell/CARTMELLBIOL7263.rmd/tree/main/Assignments/Results/MBT_top10.csv/">Link
+<p><a href="https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Results/MBT_top10.csv">Link
 to CVS File</a></p>
 </div>
 
