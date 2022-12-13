@@ -35,18 +35,48 @@ totals_MBT <- MBT_ebird %>%
   summarise(total_species = n())
 view(totals_MBT)
 
-#What are our vars
+
+#factor month
+MBT_month_fact <- totals_MBT %>%
+  mutate(class = factor(month, levels = unique(MBT_ebird$month)))
+view(MBT_month_fact)
+
+#Plot # of species each month 
+#   - color points = year, facet by location
+species_month_plot <- ggplot(MBT_month_fact, 
+                             aes(month, total_species)) +
+  geom_point(aes(color = year), size = 3) +
+  facet_wrap(~location) +
+  xlab("Month") +
+  ylab("Total # of Species")
+species_month_plot
+
+
+# Part 2
+# use dataset from Assn. 5 
+part2 <- read.csv("Assignments/Results/Assn5_Whole.csv")
+
+view(part2)
+#Plot a comparison of mass by treatment
+mass_treatment_plot <- ggplot(part2, 
+                              aes(Treatment, mass)) +
+  geom_jitter(size = 3, aes(Treatment, mass, color = Sex)) +
+  xlab("Treatment") +
+  ylab("Mass") +
+  #add our  stats
+  stat_summary(fun = mean, geom = "crossbar", color = "grey") +
+  stat_summary(geom = "errorbar") +
+  labs(color = "Sex")
+mass_treatment_plot
+
+
+
 years <- unique(MBT_ebird$year)
 locations <- unique(MBT_ebird$location)
 months <- unique(MBT_ebird$month)
-
-#factor them with levels for 
-MBT_fact <- MBT_ebird %>%
-  mutate(class = factor(location, levels = unique(MBT_ebird$location)))
 
 
 
 group_by(year) %>%
   mutate(month_count = n())
 View(month_count)
-# Plot # of species each month - color points = yeawr, facet by location
