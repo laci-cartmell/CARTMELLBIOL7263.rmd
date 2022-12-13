@@ -23,13 +23,6 @@ Part2 <- read_csv("https://github.com/mbtoomey/Biol_7263/blob/main/Data/assignme
 View(Part1) # body_length, age
 View(Part2) # mass
 
-#Planning
-# part 1 has 2 rows (body_length, age) with Sample00_Sex_Treatment 
-# Part 2 has 1 row (mass) with Sample00_Treatment 
-# 
-# so when joining better to join 2 with 1
-# Wide data - Each row is seperate groupingbest if converted to 3 col
-
 ```
 ## Pivot-long
 ```
@@ -68,8 +61,6 @@ write_csv(p1_2 %>%
 
 ```
 
-############
-## Problem 2
 
 #New tibble w/ mean +/- standard deviation of the residual mass (mass/body length) 
 #   by treatment and sex - group-by?
@@ -103,4 +94,5 @@ write_csv(Whole_T %>%
 ```
 
 
-##
+## Link to code
+[Assn5 Code]()

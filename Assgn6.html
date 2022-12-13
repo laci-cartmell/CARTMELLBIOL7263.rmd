@@ -11,8 +11,9 @@
 
 <meta name="author" content="Laci Cartmell" />
 
+<meta name="date" content="2022-12-13" />
 
-<title>Assignment 5</title>
+<title>Assignment 6</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -362,96 +363,109 @@ pre code {
 
 
 
-<h1 class="title toc-ignore">Assignment 5</h1>
+<h1 class="title toc-ignore">Assignment 6</h1>
 <h4 class="author">Laci Cartmell</h4>
-<h4 class="date">2022-1]2-12</h4>
+<h4 class="date">2022-12-13</h4>
 
 </div>
 
 
-<div id="assignment-5" class="section level4">
-<h4>Assignment 5</h4>
-</div>
 <div id="load-the-packages-needed" class="section level2">
 <h2>load the packages needed:</h2>
-<pre><code>require(tidyverse)</code></pre>
-</div>
-<div id="download-and-import-data" class="section level2">
-<h2>Download and import data</h2>
-<pre><code>Part1 &lt;- read_csv(&quot;https://github.com/mbtoomey/Biol_7263/blob/main/Data/assignment6part1.csv?raw=true&quot;)
-Part2 &lt;- read_csv(&quot;https://github.com/mbtoomey/Biol_7263/blob/main/Data/assignment6part2.csv?raw=true&quot;)
-View(Part1) # body_length, age
-View(Part2) # mass
+<pre><code>require(tidyverse)
+require(ggplot2)
+require(dplyr)
+
+#load in data
+MBT_ebird &lt;- read_csv(&quot;https://github.com/mbtoomey/Biol_7263/blob/main/Data/MBT_ebird.csv?raw=true&quot;)
+View(MBT_ebird)
 </code></pre>
+<div id="part-1" class="section level4">
+<h4>PART 1</h4>
 </div>
-<div id="pivot-long" class="section level2">
-<h2>Pivot-long</h2>
-<pre><code>#seperate out subject column into 3 cols
-p1_1 &lt;- Part1 %&gt;%
-  pivot_longer(cols = !ID, names_to = c(&quot;Subject&quot;, &quot;Sex&quot;, &quot;Treatment&quot;), names_sep= &quot;_&quot;)
-View(p1_1)
-
-#change ID col, into 2
-p1_2 &lt;- p1_1 %&gt;%
-  pivot_wider(names_from = ID, values_from = value)
-View(p1_2)
-
-p2_1 &lt;- Part2 %&gt;%
-  pivot_longer(col=!ID, names_to = c(&quot;Subject&quot;),
-                        names_pattern = &quot;(Sample1?.)..*&quot;)
-View(p2_1)  #id, subject, value
-
-#now join for mass
-p2_2 &lt;- p2_1 %&gt;%
-  pivot_wider(names_from = ID, values_from = value)
-View(p2_2)
+</div>
+<div id="total-of-species-each-month-each-year-in-each-location" class="section level1">
+<h1>Total # of species each month, each year, in each location</h1>
+<pre><code>totals_MBT &lt;- MBT_ebird %&gt;%
+  group_by(location, year, month) %&gt;%
+  count(scientific_name) %&gt;%
+  summarise(total_species = n())
+view(totals_MBT)</code></pre>
+</div>
+<div id="make-month-a-factor" class="section level1">
+<h1>Make month a factor</h1>
+<pre><code>MBT_month_fact &lt;- totals_MBT %&gt;%
+  mutate(class = factor(month, levels = unique(MBT_ebird$month)))
+view(MBT_month_fact)</code></pre>
+</div>
+<div id="plot-of-species-each-month" class="section level1">
+<h1>Plot # of species each month</h1>
+<ul>
+<li>color points = year, facet by location</li>
+</ul>
+<pre><code>species_month_plot &lt;- ggplot(MBT_month_fact, 
+                             aes(month, total_species)) +
+  geom_point(aes(color = year), size = 3) +
+  facet_wrap(~location) +
+  xlab(&quot;Month&quot;) +
+  ylab(&quot;Total # of Species&quot;)
+species_month_plot
 </code></pre>
-</div>
-<div id="join-parts-together-to-make-a-whole" class="section level2">
-<h2>Join Parts together to make a whole</h2>
-<pre><code>#export as .csv in folder called Results
-write_csv(p1_2 %&gt;%
-  inner_join(p2_2, by = &quot;Subject&quot;),
-  &quot;Results/Assn5_Whole.csv&quot;)
-  </code></pre>
-</div>
-<div id="problem-2" class="section level2">
-<h2>Problem 2</h2>
-<pre><code>
+<div id="part-2" class="section level4">
+<h4>Part 2</h4>
+<pre><code># use dataset from Assn. 5 
+part2 &lt;- read.csv(&quot;Assignments/Results/Assn5_Whole.csv&quot;)
 
-#New tibble w/ mean +/- standard deviation of the residual mass (mass/body length) 
-#   by treatment and sex - group-by?
-#export as a .csv file to “Results” folder within your R projec
+view(part2)</code></pre>
+</div>
+</div>
+<div id="plot-a-comparison-of-mass-by-treatment" class="section level1">
+<h1>Plot a comparison of mass by treatment</h1>
+<pre><code>mass_treatment_plot &lt;- ggplot(part2, 
+                              aes(Treatment, mass)) +
+  geom_jitter(size = 3, aes(Treatment, mass, color = Sex)) +
+  xlab(&quot;Treatment&quot;) +
+  ylab(&quot;Mass&quot;) +
+  #add our  stats
+  stat_summary(fun = mean, geom = &quot;crossbar&quot;, color = &quot;grey&quot;) +
+  stat_summary(geom = &quot;errorbar&quot;) +
+  labs(color = &quot;Sex&quot;)
+mass_treatment_plot</code></pre>
+</div>
+<div id="scatterplot-of-agexmass" class="section level1">
+<h1>Scatterplot of agexmass</h1>
+<pre><code>age_mass_plot &lt;- ggplot(part2, aes(age, mass, color = Treatment)) +
+  geom_jitter(width = 0.3, alpha  = .4, size = 3) + #transparency overlaps
+  geom_point(size=3) +
+  xlab(&quot;Age&quot;) +
+  ylab(&quot;Mass&quot;) +
+  geom_smooth(size = 3, method = lm, se = FALSE) +
+                labs(color = &quot;Treatment&quot;)
 
-#add in our tibble
-Whole &lt;- read_csv(&quot;Results/Assn5_Whole.csv&quot;)
-View(Whole)
-#mean and st.dev for residual mass (mass/body length)
-Whole_T &lt;- Whole %&gt;%
-  group_by(Treatment) %&gt;%
-  mutate(resid_mass = mass / body_length) %&gt;%
-  summarize(mean_resid_mass = mean(resid_mass),
-            SD_resid_mass = sd(resid_mass))
-View(Whole_T)  
+age_mass_plot  </code></pre>
+</div>
+<div id="combine-mass-and-age-plots-with-patchwork" class="section level1">
+<h1>Combine mass and age plots with patchwork</h1>
+<pre><code>require(patchwork)
+
+age_mass_treatment &lt;- mass_treatment_plot / age_mass_plot
+age_mass_treatment_plot &lt;- age_mass_treatment + 
+  plot_annotation(&quot;Mass by Treatment and Age&quot;,
+                  tag_levels = &quot;1&quot;, caption = &quot;Figure 1&quot;)
+age_mass_treatment_plot
+
 </code></pre>
+<div id="plot-generated" class="section level2">
+<h2>Plot Generated</h2>
+<div class="figure">
+<img src="data:image/jpeg;base64,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" alt />
+<p class="caption">Comparison with Patchwork</p>
 </div>
-<div id="wrapping-it-up" class="section level2">
-<h2>Wrapping it up</h2>
-<pre><code>Whole_S &lt;- Whole %&gt;%
-  group_by(Sex) %&gt;%
-  mutate(resid_mass = mass / body_length) %&gt;%
-  summarize(mean_resid_mass = mean(resid_mass),
-            SD_resid_mass = sd(resid_mass))
-View(Whole_S)
-
-#Now we need to combine T and S tibbles
-write_csv(Whole_T %&gt;%
-            full_join(Whole_S), &quot;Results/Assign5_Whole_Complete.csv&quot;)
-</code></pre>
 </div>
-<div id="link-to-code" class="section level2">
-<h2>Link to code</h2>
-<p><a href>Assn5 Code</a></p>
+</div>
+<div id="link-to-code" class="section level1">
+<h1>link to code</h1>
+<p><a href>Assn6 Code</a></p>
 </div>
 
 
