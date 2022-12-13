@@ -20,9 +20,9 @@ View(MBT_ebird)
 
 ```
 
-#### PART 1
+# PART 1
 
-# Total # of species each month, each year, in each location
+## Total # of species each month, each year, in each location
 
 ```
 totals_MBT <- MBT_ebird %>%
@@ -32,14 +32,14 @@ totals_MBT <- MBT_ebird %>%
 view(totals_MBT)
 ```
 
-# Make month a factor
+## Make month a factor
 ```
 MBT_month_fact <- totals_MBT %>%
   mutate(class = factor(month, levels = unique(MBT_ebird$month)))
 view(MBT_month_fact)
 ```
 
-# Plot # of species each month 
+## Plot # of species each month 
    - color points = year, facet by location
 ```
 species_month_plot <- ggplot(MBT_month_fact, 
@@ -52,7 +52,7 @@ species_month_plot
 
 ```
 
-#### Part 2
+# Part 2
 ```
 # use dataset from Assn. 5 
 part2 <- read.csv("Assignments/Results/Assn5_Whole.csv")
@@ -60,7 +60,7 @@ part2 <- read.csv("Assignments/Results/Assn5_Whole.csv")
 view(part2)
 ```
 
-# Plot a comparison of mass by treatment
+## Plot a comparison of mass by treatment
 ```
 mass_treatment_plot <- ggplot(part2, 
                               aes(Treatment, mass)) +
@@ -73,7 +73,7 @@ mass_treatment_plot <- ggplot(part2,
   labs(color = "Sex")
 mass_treatment_plot
 ```
-# Scatterplot of agexmass
+## Scatterplot of agexmass
 ```
 age_mass_plot <- ggplot(part2, aes(age, mass, color = Treatment)) +
   geom_jitter(width = 0.3, alpha  = .4, size = 3) + #transparency overlaps
@@ -86,7 +86,7 @@ age_mass_plot <- ggplot(part2, aes(age, mass, color = Treatment)) +
 age_mass_plot  
 ```
 
-# Combine mass and age plots with patchwork
+## Combine mass and age plots with patchwork
 ```
 require(patchwork)
 
@@ -102,5 +102,5 @@ age_mass_treatment_plot
 ## Plot Generated
 ![Comparison with Patchwork](6.2.1.jpeg)
 
-# link to code
-[Assn6 Code]()
+### link to code
+[Assn6 Code](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assgn6.R)
