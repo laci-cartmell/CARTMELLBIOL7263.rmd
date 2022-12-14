@@ -46,7 +46,7 @@ ___
 |12-12-22 | Week 5 | [Assignment 5 - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Assignment5.rmd)
 |12-12-22 | Week 7| [Assignment 6 - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assgn6.Rmd)
 |9-22-22 | Oct.24th | [Tanner Mierow Lesson - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/GraduateLessons/TannerMierow.R)
-|12-13-22 | Dec.12th | [Amy West Lesson - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/GraduateLessons/WestAmy_AICC/assign_models_AmyWest_LaciCartmell.html)
+|12-13-22 | Dec.12th | [Amy West Lesson - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/GraduateLessons/WestAmy_AICC/assign_models_AmyWest_LaciCartmell.Rmd)
 
 
 ## Lesson 
