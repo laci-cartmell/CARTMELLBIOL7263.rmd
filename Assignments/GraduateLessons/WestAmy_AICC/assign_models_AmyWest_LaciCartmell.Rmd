@@ -95,8 +95,9 @@ library(AICcmodavg)
 # AICc table 
 
 ```
-AICc_table_band<-model.sel(model_list)
 
+AICc_table1 <- model.sel(model_list)
+AICc_table1
 ```
 ## better view W/ Amy's Trick:
 #  create a list of model names
@@ -133,10 +134,15 @@ modavg_table
 ### v1
 
 ```
-AICc_table_band
+AICc_table1
+print("AICc_table1")
+
 ```
 ### v2
 ```
 modavg_table
 
 ```
+
+### link to code
+[Assn_AICc Code](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assgn6.R)

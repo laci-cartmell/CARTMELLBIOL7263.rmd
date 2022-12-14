@@ -452,8 +452,9 @@ library(AICcmodavg)</code></pre>
 </div>
 <div id="aicc-table" class="section level1">
 <h1>AICc table</h1>
-<pre><code>AICc_table_band&lt;-model.sel(model_list)
-</code></pre>
+<pre><code>
+AICc_table1 &lt;- model.sel(model_list)
+AICc_table1</code></pre>
 <div id="better-view-w-amys-trick" class="section level2">
 <h2>better view W/ Amy’s Trick:</h2>
 </div>
@@ -491,7 +492,9 @@ modavg_table
 <h1>Compare the two tables</h1>
 <div id="v1" class="section level3">
 <h3>v1</h3>
-<pre><code>AICc_table_band</code></pre>
+<pre><code>AICc_table1
+print(&quot;AICc_table1&quot;)
+</code></pre>
 </div>
 <div id="v2" class="section level3">
 <h3>v2</h3>

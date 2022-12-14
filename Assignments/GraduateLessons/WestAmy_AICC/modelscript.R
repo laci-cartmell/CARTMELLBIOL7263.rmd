@@ -81,7 +81,7 @@ library(AICcmodavg)
 
 #Messy but informative!
 #aicc table !
-AICc_table_band<-model.sel(model_list)
+AICc_table1 <- model.sel(model_list)
 
 ### better view
 
@@ -105,20 +105,21 @@ model_name_listb <- model_name_list[seq(3,
 modavg_table<-aictab(model_list, 
                      modnames = model_name_listb, 
                      second.ord = TRUE,   #Use AICc (FALSE=AIC)
-                     sort = TRUE) #Order based on model weight
+                     soTRUE) #Order based on model weight
 
 #View table
-modavg_table
+table2 <- modavg_table
 
 ####
 #
 ####
 # Compare the two tables
 #v1
-AICc_table_band
+AICc_table1
+print(AICc_table1)
 
 #v2
-modavg_table
+print(modavg_table)
 
 
 
