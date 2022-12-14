@@ -145,4 +145,4 @@ modavg_table
 ```
 
 ### link to code
-[Assn_AICc Code](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assgn6.R)
+[Assn_AICc Code](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/GraduateLessons/WestAmy_AICC/modelscript.R)
