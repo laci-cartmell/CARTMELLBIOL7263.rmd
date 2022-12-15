@@ -58,5 +58,8 @@ ggplot(heatmap_num, aes(x = Sample, y = Gene, fill = Expression)) +
         panel.background = element_blank(),
         panel.border = element_blank())
 ```
+### Script
+
+[Madison Herrboldt Lesson - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/GraduateLessons/Madison/Heatmaps_Madison.R)
 
 
