@@ -31,7 +31,7 @@ ___
 
 **My main reseaerch organism, the swallowbug**
 
-[Swallowbug](SWBG.jpeg)
+[Swallowbug](SWBG.jpeg) 
 
 ```
 ```
@@ -47,7 +47,7 @@ ___
 |12-12-22 | Week 7| [Assignment 6 - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assgn6.Rmd)
 |9-22-22 | Oct.24th | [Tanner Mierow Lesson - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/GraduateLessons/TannerMierow.R)
 |12-13-22 | Dec.12th | [Amy West Lesson - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/GraduateLessons/WestAmy_AICC/assign_models_AmyWest_LaciCartmell.Rmd)
-
+|12-13-22 | Dec.12th | [Madison Herrboldt Lesson - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/GraduateLessons/Madison/Assn_Heatmaps.Rmd)
 
 ## Lesson 
 | DATE | ASSIGNMENT | LINK
