@@ -30,7 +30,8 @@ ___
 - [ResearchGate](https://www.researchgate.net/profile/Laci-Cartmell)  
 
 **My main reseaerch organism, the swallowbug**
-![Swallowbug](SWBG.jpeg)
+
+[Swallowbug](SWBG.jpeg) 
 
 ```
 ```
@@ -38,12 +39,15 @@ ___
 ## Projects in R
 | DATE | ASSIGNMENT | LINK
 | :-- | :-- | :--
-|9-8-22 | Week 2 | [Assignment 1](https://laci-cartmell.github.io/CARTMELLBIOL7263.rmd/)  
-|9-15-22 | Weel 3  | [Assignment 2](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/tree/main/Assignments/)
-|9-22-22 | Week 4 | [Assignment 3](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/tree/main/Assignments/)
-|11-11-22 | Week 5 | [Assignment 4](link 4)
-|9-22-22 | Oct.24th | [Tanner Mierow Assignment](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Graduate%20Lessons/TannerMierow.R)
-
+|9-8-22 | Week 2 | [Assignment 1 - ](https://laci-cartmell.github.io/CARTMELLBIOL7263.rmd/)  
+|9-15-22 | Week 3  | [Assignment 2 - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Assignment2.html)
+|9-22-22 | Week 4 | [Assignment 3 - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Assignment3_v1.rmd) 
+|11-11-22 | Week 5 | [Assignment 4 - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Assignment4.html) 
+|12-12-22 | Week 5 | [Assignment 5 - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Assignment5.rmd)
+|12-12-22 | Week 7| [Assignment 6 - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assgn6.Rmd)
+|9-22-22 | Oct.24th | [Tanner Mierow Lesson - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/GraduateLessons/TannerMierow.R)
+|12-13-22 | Dec.12th | [Amy West Lesson - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/GraduateLessons/WestAmy_AICC/assign_models_AmyWest_LaciCartmell.Rmd)
+|12-13-22 | Dec.12th | [Madison Herrboldt Lesson - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/GraduateLessons/Madison/Assn_Heatmaps.Rmd)
 
 ## Lesson 
 | DATE | ASSIGNMENT | LINK

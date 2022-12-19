@@ -1,20 +1,4 @@
----
-title: "Assignment4.rmd"
-author: "Laci Cartmell"
-date: "2022-10-05"
-output: html_document
----
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## Initial Set-up
-
-Install and load packages and read in file
-
-
-```
 ## Install Packages
 
 install.packages("readr")
@@ -29,13 +13,12 @@ View(MBT_ebird)   #View the file
 #count_tot -> total number of birds seen that day
 #count -> count of times a species was observed
 
-```
-
+############
 ## Problem 1
-- Which year has the most individual birds, how many?
+## Which year has the most individual birds, how many?
 
-```
 # group by year, the summarize count for each year?
+
 
 MBT_COUNT <- MBT_ebird %>%
   group_by(year) %>%
@@ -54,29 +37,27 @@ print(paste("The max count is", val))
 
 years <- filter(MBT_COUNT, year_count == 1672)
 yearmaxval <- max(years$year)
-
 print(paste(yearmaxval, "had the max count of birds"))
   
 View(years)
-```
 
-## Problem 2 
-- Count for that year
-```
+############
+## Problem 2
+## in that year, how many different species did I observe?
+
+
 #count all unique instance of name
 species_count <- n_distinct(years$scientific_name)
 species_count
 print(paste(species_count, "species were observed."))
-```
 
-
+############
 ## Problem 3
-- use filter to find pattern of red-winged blackbirds
-- create new tibble with only those matches
-- group by state, create count var
+## Which  ,li
+#use filter to find pattern of red-winged blackbirds
+#create new tibble with only those matches
+#group by state, create count var
 
-```
-#filter by pattern of name
 RWB_COUNT <- MBT_ebird %>%
   filter(common_name == "Red-winged Blackbird") %>%
   group_by(location) %>%
@@ -95,13 +76,12 @@ View(statetoprwb)
 
 print(paste(statetoprwb$location, "is where most RWBs were found in "))
 
-```
 
 ## Problem 4
-- Filter 5-200min duration. 
-- Find mean rate per checklist that I encounter species each year
-- Calculate number of species in each checklist / duration - take mean for year
-```
+## Filter 5-200min duration. 
+## Find mean rate per checklist that I encounter species each year
+## calculate number of species in each checklist / duration - take mean for year
+
 #reminder of file format
 View(MBT_ebird)
 
@@ -122,16 +102,16 @@ mean_rate_list <- rpc %>%
   summarize(mean_rate_f=mean(rate))
   #mutate(mean_rate = rate / year))
 View(mean_rate_list)
-```
 
+
+############
 ## Problem 5
-- tibble w/10 top freq.obs.species. 
-- make a top ten list _ sort by observations, then remove unique species ,  head of ten
-- filter observations with that list
-- export tibble to csv in folder 'Results' w/in R project
-- add link to markdown doc.
+## tibble w/10 top freq.obs.species. 
+# make a top ten list _ sort by observations, then remove unique species ,  head of ten
+# filter observations with that list
+# export tibble to csv in folder 'Results' w/in R project
+# add link to markdown doc.
 
-```
 #create a ranking of species observations
 species_rank_top10 <- MBT_ebird %>%
   group_by(scientific_name) %>%
@@ -148,5 +128,3 @@ MBT_TOP10 <- MBT_ebird %>%  filter(scientific_name == species_rank_top10$scienti
 View(MBT_TOP10)
 #write csv
 write_csv(MBT_TOP10, "~/CARTMELLBIOL7263.rmd/Assignments/Results/MBT_top10.csv")
-```
-[Link to CVS File](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Results/MBT_top10.csv)
