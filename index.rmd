@@ -53,6 +53,8 @@ ___
 | DATE | ASSIGNMENT | LINK
 | :-- | :-- | :--
 |11-02-22 | PCA | [Cartmell_PCA](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/fb1a83970428cca0d7f8f30091ad0f8b345725a3/Assignments/Graduate%20Lessons/CartmellLaci_Lesson/CartmellLesson.html)
+| | PCA | [Data_PCA](https://github.com/laci-cartmell/Cartmell_Lesson_PCA/blob/main/Cartmell_NLCD_Rlesson.xlsx)
+
 
 
 
