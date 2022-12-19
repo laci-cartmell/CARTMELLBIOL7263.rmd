@@ -26,33 +26,55 @@ View(MBT_COUNT)
 #output max value w/in year count
 maxcount <- max(MBT_COUNT$year_count)
 #tibble with only values from the year with most counts
-maxyear <- filter(MBT_COUNT, year_count == val)
+maxyear <- filter(MBT_COUNT, year_count == maxcount)
 View(maxyear)
  
+#print answers out
+# 2014
+
 ## Problem 2
-## in that year, how many different species did I observe?
+## in that year (2014), how many different species did I observe?
 #count all unique instance of name
 species_count <- n_distinct(maxyear$scientific_name)
 species_count
 
+#print answer
+# In 2014, 210 unique species were observed. 
+
 ## Problem 3
-## Which state, most freq. observe red-winged blackbirds
+## Which state, most freq. observe red-winged blackbirds?
+
 #use search to find pattern of red-winged blackbirds
 #create new tibble with only those matches
+rwb_count <- filter(MBT_ebird, common_name == "Red-winged Blackbird")
+View(rwb_count)
+
 #group by state, create count var
+state_rwb_count <- rwb_count %>%
+  group_by(location) %>%
+  mutate(location_count = n())
+View(state_rwb_count)
+
+#remove unique location counts
+unique(rwb_count$location_count)
+summarize(state_rwb_count = sum(location_count))  #sum total counts
+?unique
 #print resutlsyear has the most individual birds, how many?
-
-
+#sum count based on location?
+if location = location,
+sum 
+slice_max(diaojf)
 ## Problem 4
-## Filter 5-200min duration. Find mean rate per checklist that I encounter species each year
+## Filter 5-200min duration. 
+# Find mean rate per checklist that I encounter species each year
 # calculate number of species in each checklist / duration - take mean for year
-
-#use search to find pattern of red-winged blackbirds
-#create new tibble with only those matches
-#group by state, create count var
-#print resutlsyear has the most individual birds, how many?
-
-
+duration_5t200min <- MBT_ebird %>%
+  filter(duration >= 5 & duration <= 200) %>%
+  group_by(list_ID) %>%
+  
+#NUM SPECIES IN each list_ID / duration of list
+# mean of rate per checklist
+View(duration_5t200min)
 
 ## Problem 5
 ## tibble w/10 top freq.obsv.species. 
