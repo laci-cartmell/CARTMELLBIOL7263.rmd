@@ -45,7 +45,7 @@ ___
 |11-11-22 | Week 5 | [Assignment 4 - ](Assignments/Assignment4.html) 
 |12-12-22 | Week 5 | [Assignment 5 - ](Assignments/Assignment5.html)
 |12-12-22 | Week 7| [Assignment 6 - ](Assgn6.html)
-|9-22-22 | Oct.24th | [Tanner Mierow Lesson - ](Assignments/GraduateLessons/TannerMierow.html)
+|9-22-22 | Oct.24th | [Tanner Mierow Lesson - ](Assignments/Assn_Mierow.html)
 |12-13-22 | Dec.12th | [Amy West Lesson - ](Assignments/GraduateLessons/WestAmy_AICC/assign_models_AmyWest_LaciCartmell.html)
 |12-13-22 | Dec.12th | [Madison Herrboldt Lesson - ](Assignments/GraduateLessons/Madison/Assn_Heatmaps.html)
 
