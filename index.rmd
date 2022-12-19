@@ -40,14 +40,14 @@ ___
 | DATE | ASSIGNMENT | LINK
 | :-- | :-- | :--
 |9-8-22 | Week 2 | [Assignment 1 - ](https://laci-cartmell.github.io/CARTMELLBIOL7263.rmd/)  
-|9-15-22 | Week 3  | [Assignment 2 - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Assignment2.html)
-|9-22-22 | Week 4 | [Assignment 3 - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Assignment3_v1.html) 
-|11-11-22 | Week 5 | [Assignment 4 - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Assignment4.html) 
-|12-12-22 | Week 5 | [Assignment 5 - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/Assignment5.html)
-|12-12-22 | Week 7| [Assignment 6 - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assgn6.html)
-|9-22-22 | Oct.24th | [Tanner Mierow Lesson - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/GraduateLessons/TannerMierow.html)
-|12-13-22 | Dec.12th | [Amy West Lesson - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/GraduateLessons/WestAmy_AICC/assign_models_AmyWest_LaciCartmell.html)
-|12-13-22 | Dec.12th | [Madison Herrboldt Lesson - ](https://github.com/laci-cartmell/CARTMELLBIOL7263.rmd/blob/main/Assignments/GraduateLessons/Madison/Assn_Heatmaps.html)
+|9-15-22 | Week 3  | [Assignment 2 - ](Assignments/Assignment2.html)
+|9-22-22 | Week 4 | [Assignment 3 - ](Assignments/Assignment3_v1.html) 
+|11-11-22 | Week 5 | [Assignment 4 - ](Assignments/Assignment4.html) 
+|12-12-22 | Week 5 | [Assignment 5 - ](Assignments/Assignment5.html)
+|12-12-22 | Week 7| [Assignment 6 - ](Assgn6.html)
+|9-22-22 | Oct.24th | [Tanner Mierow Lesson - ](Assignments/GraduateLessons/TannerMierow.html)
+|12-13-22 | Dec.12th | [Amy West Lesson - ](Assignments/GraduateLessons/WestAmy_AICC/assign_models_AmyWest_LaciCartmell.html)
+|12-13-22 | Dec.12th | [Madison Herrboldt Lesson - ](Assignments/GraduateLessons/Madison/Assn_Heatmaps.html)
 
 ## Lesson 
 | DATE | ASSIGNMENT | LINK
